@@ -3,7 +3,7 @@ html, body {
     padding: 0;
     top: 0;
     height: 100%;
-    font-family: 'Times', sans-serif, monospace;
+    font-family: "Times New Roman", Times, serif;
     cursor: url("../img/assets/cursor.png"), auto;
 }
 
