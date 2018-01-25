@@ -6,9 +6,31 @@ $(document).ready(function(){
         $('#logo').toggleClass('open', 2000);
     });
     
+// Gallery Settings
+    
     $('main').Chocolat({
-        imageSize: 'contain'
-    })
+        container: '#gallery-container',
+        imageSize: 'contain',
+        loop: true,
+        className:'chocolat-gallery'
+    }).data('chocolat').api().open()
+    
+    var instance = $('main').Chocolat().data('chocolat');
+    
+    instance.api().getElem('overlay').off('click.chocolat')
+    
+    $(document).off('keydown.chocolat').on('keydown.chocolat', function(e) {
+        if (instance.api().get('initialized')) {
+            if (e.keyCode == 37) {
+                instance.api().prev()
+            }
+            else if (e.keyCode == 39) {
+                instance.api().next()
+            }
+        }
+    });
+    
+// Screen Resizing
     
     mediaCheck({
         

@@ -258,17 +258,6 @@ h1 {
 
 /* Logo */
 
-#logo {
-    width: 8%;
-    height: 50%;
-    top: 50%;
-    position: fixed;
-    z-index: 900;
-}
-
-#logo.open {
-    color: white;
-}
 
 /* Home Page */
 
@@ -295,6 +284,7 @@ h3 {
 }
 
 #logo h3 {
+    position: relative;
     transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
@@ -304,6 +294,19 @@ h3 {
 #logo h3 a {
     text-decoration: none;
     color: #808080;
+}
+
+#logo {
+    width: 8%;
+    height: 50%;
+    top: 50%;
+    bottom: 0;
+    position: fixed;
+    z-index: 900;
+}
+
+#logo.open {
+    color: white;
 }
 
 .title {
@@ -474,6 +477,7 @@ h2 {
 .chocolat-open{
     overflow: hidden;
 }
+
 .chocolat-overlay{
     height:100%;
     width:100%;
@@ -484,17 +488,18 @@ h2 {
     background-color:#fff;
     display:none;
 }
-.chocolat-wrapper{
+
+.chocolat-wrapper {
     height:100%;
     width:100%;
-    position:fixed;
+    position:absolute;
     left:0;
     top:0;
     z-index:1000;
     color: #fff;
 }
 
-.chocolat-loader{
+.chocolat-loader {
     height:32px;
     width:32px;
     position:absolute;
@@ -507,7 +512,7 @@ h2 {
     display:none;
 }
 
-.chocolat-content{
+.chocolat-content {
     position:fixed;
     width:0px;
     height:0px;
@@ -522,6 +527,7 @@ h2 {
     width:100%;
     height:100%;
 }
+
 .chocolat-wrapper .chocolat-left{
     position:absolute;
     left:45px;
@@ -533,10 +539,9 @@ h2 {
     background:url(../img/assets/prev.png) 50% 50% no-repeat;
     z-index: 17;
     display: none;
-
 }
 
-.chocolat-wrapper .chocolat-right{
+.chocolat-wrapper .chocolat-right {
     position:absolute;
     right:45px;
     width:50px;
@@ -557,13 +562,13 @@ h2 {
     display: block;
 }
 
-.chocolat-wrapper .chocolat-top{
+.chocolat-wrapper .chocolat-top {
     position:absolute;
     top:43px;
     right: 0;
     left: 0;
-    line-height:50px;
-    height:50px;
+    line-height: 50px;
+    height: 50px;
     overflow: hidden;
     z-index: 17;
     margin-bottom: 10px;
@@ -584,8 +589,49 @@ h2 {
 .chocolat-in-container .chocolat-overlay{
     position: absolute;
 }
+
 .chocolat-in-container{
     position: relative;
+}
+
+#gallery .chocolat-wrapper {
+    z-index: 0;
+    background-color: none;
+}
+
+#gallery .chocolat-close {
+    width: 0px;
+    height: 0px;
+    display: none;
+}
+
+#gallery .chocolat-right, #gallery .chocolat-left {
+    margin: 0;
+    background: none;
+    height: 74%;
+    top: 13%;
+    cursor: e-resize;
+}
+
+#gallery .chocolat-right {
+    cursor: e-resize;
+}
+
+#gallery .chocolat-left {
+    cursor: w-resize;
+}
+
+#gallery-container {
+    width: 70%; 
+    max-width:100%; 
+    height: 100%; 
+    background: #E0E0E0; 
+    margin:auto;
+    overflow: hidden;
+}
+
+.gallery-thumb {
+    display: none;
 }
 
 /* Tablet */
@@ -608,19 +654,12 @@ img {
 }
    
 #logo {
-    width: 140px;
-    height: 30px;
-    right: 35px;
-    top: 15px;
-    background-image: url(../img/assets/logo-2.png);
-    background-size: 100%;
-    background-position: center;
-    z-index: 0;
-}    
-
-#logo.open {
-    background-image: url(../img/assets/logo-2.png);
-    z-index: 0;
+    right: 125px;
+    top: 8px;
+}  
+    
+#logo h3 {
+    transform: none;
 }
     
 #nav-icon {
